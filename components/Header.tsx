@@ -131,11 +131,14 @@ const Header: React.FC<HeaderProps> = ({ category, onHomeClick }) => {
           </h1>
         </div>
         
-        {/* Mobile: #2026 & Portfolio aligned right, stacked vertically */}
-        <div className="flex flex-col items-end md:flex-row md:items-center gap-1 md:gap-4 mt-4 md:mt-0 md:mb-2 ml-auto md:ml-0">
-          <span className="text-xl md:text-3xl font-bold tracking-tight">#2026</span>
-          <span className="text-2xl md:text-5xl font-serif-heavy tracking-tight">Portfolio</span>
+        {/* Mobile-only #2026 Portfolio block - Hidden on desktop */}
+        <div className="flex flex-col md:hidden mt-4 gap-1">
+          <span className="text-xl font-bold tracking-tight">#2026</span>
+          <span className="text-2xl font-serif-heavy tracking-tight">Portfolio</span>
         </div>
+        
+        {/* Mobile-only visible block to ensure spacing if needed, but for now we hide it as requested */}
+        <div className="md:hidden"></div>
       </div>
     );
   }
