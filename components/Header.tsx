@@ -113,12 +113,12 @@ const Header: React.FC<HeaderProps> = ({ category, onHomeClick }) => {
   }
 
   if (category !== Category.HOME && category !== Category.CATALOG) {
-    // 针对分类详情页的 Header (如 Cultural Design)
-    const label = category === '文创设计' ? 'Cultural' : 
-                  category === '海报设计' ? 'Poster' :
-                  category === '包装设计' ? 'Package' :
-                  category === '插画设计' ? 'Illustration' :
-                  category === '线下物料设计' ? 'Material' : category;
+    // 针对分类详情页的 Header
+    const label = category === Category.LONG_IMAGE ? 'Cultural' : 
+                  category === Category.POSTER ? 'Poster' : 
+                  category === Category.PACKAGE ? 'Package' : 
+                  category === Category.ILLUSTRATION ? 'Illustration' : 
+                  category === Category.MATERIAL ? 'Material' : category;
 
     return (
       <div className="px-6 md:px-12 pt-8 md:pt-16 mb-8 md:mb-16 flex flex-col md:flex-row md:items-end gap-2 md:gap-8 relative z-50">
@@ -130,8 +130,6 @@ const Header: React.FC<HeaderProps> = ({ category, onHomeClick }) => {
             Design
           </h1>
         </div>
-        
-
         
         {/* Mobile-only visible block to ensure spacing if needed, but for now we hide it as requested */}
         <div className="md:hidden"></div>
