@@ -154,11 +154,11 @@ const App: React.FC = () => {
                     onClick={() => setActiveCategory(tab.id)}
                     className={`transition-all duration-300 cursor-pointer relative group flex-shrink-0
                       ${activeCategory === tab.id ? 'z-10 scale-105' : 'opacity-40 grayscale hover:opacity-100 hover:grayscale-0'}
-                      w-[calc(33.33%-6px)] md:w-auto md:flex-1 md:h-[100px]
+                      w-[calc(33.33%-6px)] md:w-auto md:flex-1 md:h-[120px]
                     `}
                   >
-                    <div className={`folder-tab h-6 md:h-8 w-full md:w-24 ${tab.color} ${tab.textColor} px-2 md:px-3 py-1 text-[8px] font-bold truncate`}>{tab.enLabel}</div>
-                    <div className={`w-full ${tab.color} -mt-2 md:-mt-6 p-2 md:p-4 border-t border-black/5 flex items-center justify-center md:justify-start shadow-lg h-12 md:h-auto`}>
+                    <div className={`folder-tab h-6 md:h-10 w-full md:w-24 ${tab.color} ${tab.textColor} px-2 md:px-3 py-1 md:py-2 text-[8px] md:text-[10px] font-bold truncate`}>{tab.enLabel}</div>
+                    <div className={`w-full ${tab.color} -mt-2 md:-mt-6 p-2 md:p-6 border-t border-black/5 flex items-center justify-center md:justify-start shadow-lg h-12 md:h-auto`}>
                        <span className="text-xs md:text-xl font-serif-heavy truncate">{tab.label}</span>
                     </div>
                   </div>
