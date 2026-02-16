@@ -12,18 +12,19 @@ const App: React.FC = () => {
   const [passwordInput, setPasswordInput] = useState('');
   const [loginError, setLoginError] = useState(false);
 
-  useEffect(() => {
-    const auth = localStorage.getItem('site_auth');
-    if (auth === 'true') {
-      setIsAuthenticated(true);
-    }
-  }, []);
+  // 移除自动登录逻辑，确保每次刷新都需要输入密码
+  // useEffect(() => {
+  //   const auth = localStorage.getItem('site_auth');
+  //   if (auth === 'true') {
+  //     setIsAuthenticated(true);
+  //   }
+  // }, []);
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
     if (passwordInput === '711') {
       setIsAuthenticated(true);
-      localStorage.setItem('site_auth', 'true');
+      // localStorage.setItem('site_auth', 'true'); // 不再持久化保存登录状态
       setLoginError(false);
     } else {
       setLoginError(true);
