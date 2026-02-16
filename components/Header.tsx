@@ -131,10 +131,11 @@ const Header: React.FC<HeaderProps> = ({ category, onHomeClick }) => {
           </h1>
         </div>
         
-        {/* <div className="flex flex-col md:flex-row items-start md:items-center gap-1 md:gap-4 mt-4 md:mt-0 md:mb-2">
+        {/* Mobile: #2026 & Portfolio aligned right, stacked vertically */}
+        <div className="flex flex-col items-end md:flex-row md:items-center gap-1 md:gap-4 mt-4 md:mt-0 md:mb-2 ml-auto md:ml-0">
           <span className="text-xl md:text-3xl font-bold tracking-tight">#2026</span>
           <span className="text-2xl md:text-5xl font-serif-heavy tracking-tight">Portfolio</span>
-        </div> */}
+        </div>
       </div>
     );
   }
