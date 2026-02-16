@@ -83,9 +83,9 @@ const App: React.FC = () => {
           const configs = [
             { id: Category.POSTER, pos: 'md:left-[2%] z-50 w-full md:w-[38%]', h: 'h-24 md:h-[420px]', rot: 'md:rotate-[-1deg]', labelPos: 'left-8 bottom-4 md:bottom-12' },
             { id: Category.PACKAGE, pos: 'md:left-[6%] z-10 w-full md:w-[30%]', h: 'h-24 md:h-[460px]', rot: 'md:rotate-[-2deg]', labelPos: 'left-8 bottom-4 md:bottom-12' },
-            { id: Category.LONG_IMAGE, pos: 'md:left-[22%] z-40 w-full md:w-[42%]', h: 'h-24 md:h-[400px]', rot: 'md:rotate-[0.5deg]', labelPos: 'right-10 bottom-4 md:bottom-16' },
+            { id: Category.LONG_IMAGE, pos: 'md:left-[22%] z-40 w-full md:w-[42%]', h: 'h-24 md:h-[400px]', rot: 'md:rotate-[0.5deg]', labelPos: 'left-8 bottom-4 md:bottom-16' },
             { id: Category.ILLUSTRATION, pos: 'md:left-[42%] z-20 w-full md:w-[35%]', h: 'h-24 md:h-[480px]', rot: 'md:rotate-[1deg]', labelPos: 'left-8 bottom-4 md:bottom-12' },
-            { id: Category.MATERIAL, pos: 'md:right-[2%] z-30 w-full md:w-[48%]', h: 'h-24 md:h-[430px]', rot: 'md:rotate-[-0.5deg]', labelPos: 'right-12 bottom-4 md:bottom-10' },
+            { id: Category.MATERIAL, pos: 'md:right-[2%] z-30 w-full md:w-[48%]', h: 'h-24 md:h-[430px]', rot: 'md:rotate-[-0.5deg]', labelPos: 'left-8 bottom-4 md:bottom-10' },
           ];
           
           const conf = configs.find(c => c.id === tab.id) || configs[0];

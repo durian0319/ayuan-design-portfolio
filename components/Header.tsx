@@ -113,7 +113,30 @@ const Header: React.FC<HeaderProps> = ({ category, onHomeClick }) => {
   }
 
   if (category !== Category.HOME && category !== Category.CATALOG) {
-    return null;
+    // 针对分类详情页的 Header (如 Cultural Design)
+    const label = category === '文创设计' ? 'Cultural' : 
+                  category === '海报设计' ? 'Poster' :
+                  category === '包装设计' ? 'Package' :
+                  category === '插画设计' ? 'Illustration' :
+                  category === '线下物料设计' ? 'Material' : category;
+
+    return (
+      <div className="px-6 md:px-12 pt-8 md:pt-16 mb-8 md:mb-16 flex flex-col md:flex-row md:items-end gap-2 md:gap-8 relative z-50">
+        <div className="flex flex-col md:block">
+          <h1 className="text-5xl md:text-7xl font-serif-heavy leading-none break-words">
+            {label}
+          </h1>
+          <h1 className="text-5xl md:text-7xl font-serif-heavy leading-none mt-2 md:mt-0">
+            Design
+          </h1>
+        </div>
+        
+        <div className="flex items-center gap-2 md:gap-4 mt-4 md:mt-0 md:mb-2">
+          <span className="text-xl md:text-3xl font-bold tracking-tight">#2026</span>
+          <span className="text-2xl md:text-5xl font-serif-heavy tracking-tight">Portfolio</span>
+        </div>
+      </div>
+    );
   }
 
   return (
